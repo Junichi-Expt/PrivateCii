@@ -127,7 +127,7 @@
 
 		timer = setInterval(() => {
 			if (mode === "lr") {
-				current = (current === "右") ? "左" : "右";
+				current = (Math.random() < 0.5) ? "右" : "左";
 			} else {
 				let min = Number(document.getElementById("minNum").value);
 				let max = Number(document.getElementById("maxNum").value);
