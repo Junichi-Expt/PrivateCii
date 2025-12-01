@@ -147,6 +147,14 @@
 		isRunning = false;
 		clearInterval(timer);
 		document.getElementById("start").disabled = false;
+
+		let mode = document.querySelector('input[name="mode"]:checked').value;
+
+		if (mode === "lr") {
+			current = (Math.random() < 0.5) ? "右" : "左";
+		}
+
+		disp.textContent = current;
 		disp.classList.add("stopped");
 	}
 </script>
